@@ -1,0 +1,27 @@
+#项目名
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.33.204.130:3306/usercenter?serverTimezone=Asia/Shanghai
+    username: usercenter
+    password: CnFKNMDr3yw2hEty
+  #  session失效时间  一天
+  session:
+    timeout: PT24H
+    store-type: redis # 将 session 读写在 redis
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    banner-mode: off
+  # redis配置
+  redis:
+    port: 6379
+    host: localhost
+    database: 1
+#指定端口号
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
