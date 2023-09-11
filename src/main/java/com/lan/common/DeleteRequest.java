@@ -22,6 +22,4 @@ public class DeleteRequest implements Serializable {
     @ApiModelProperty(value = "队伍id")
     private long id;
 
-
-
 }

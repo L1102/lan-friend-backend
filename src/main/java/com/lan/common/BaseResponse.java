@@ -1,5 +1,6 @@
 package com.lan.common;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,11 +12,31 @@ import java.io.Serializable;
  */
 @Data
 public class BaseResponse<T> implements Serializable {
+
     private static final long serialVersionUID = -6910288092749194181L;
 
+    /**
+     * 响应码
+     */
+    @ApiModelProperty("响应码")
     private int code;
+
+    /**
+     * 返回的数据
+     */
+    @ApiModelProperty("返回的数据")
     private T data;
+
+    /**
+     * 返回的信息
+     */
+    @ApiModelProperty("返回的信息")
     private String message;
+
+    /**
+     * 描述
+     */
+    @ApiModelProperty("描述")
     private String description;
 
     public BaseResponse(int code, T data, String message, String description) {
